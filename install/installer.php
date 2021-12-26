@@ -77,9 +77,9 @@ try {
             //add data to database
             $result = $conn->exec($sql);
         }
+        echo "\n" . "*************** Database Inserted ***************";
 
 
-        //lets insert product to db
 
     }
 
@@ -93,7 +93,8 @@ try {
 echo shell_exec("mv ./public/index.php ./public/index_install.php");
 echo shell_exec("rm ./public/index_install.php");
 echo shell_exec("mv  ./public/indexB.php ./public/index.php");
-
+echo "\n" . "*************** Role back the index file successfully ***************";
+echo "\n" . "*************** Done ***************";
 echo "\n" . "*************** Done ***************";
 
 
