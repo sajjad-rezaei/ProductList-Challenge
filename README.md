@@ -30,7 +30,7 @@ Note: if there was an error, or it takes too long to install, please remove the 
 
 ## How to run the tests:
 
-When the application runs successfully you can run tests by running `docker-compose exec  php74-service php bin/phpunit` at the root of the project.
+When the application runs successfully you can run tests by running `docker-compose exec  php74-service php vendor/bin/phpunit` at the root of the project.
 
 ## How to use it:
 
