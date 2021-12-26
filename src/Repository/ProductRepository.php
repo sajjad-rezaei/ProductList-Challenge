@@ -28,25 +28,32 @@ class ProductRepository extends ServiceEntityRepository
         $category = @$values['category'];
         $priceLessThan = @$values['priceLessThan'];
         $page = @$values['page'];
+        //build the query builder
         $queryBuilderObj  = $this->createQueryBuilder('p')
             ->innerJoin('p.category', 'cat');
 
         if($category) {
+            //concat where clause for category
             $where .= " cat.name = :categoryName AND";
             $queryBuilderObj = $queryBuilderObj->setParameter("categoryName", $category);
         }
         if($priceLessThan) {
+            //concat where clause for price
             $where .= " p.price <= :price ";
+            //set the parameter fot lessThan price
             $queryBuilderObj = $queryBuilderObj->setParameter("price", $priceLessThan);
         }
         $where = rtrim($where , "AND");
+        //if there wasn't any query parameters we dont have any condition
         if(!empty($category) OR !empty($priceLessThan))
             $queryBuilderObj =
                 $queryBuilderObj->where(
                     $where
                 );
         $queryBuilderObj = $queryBuilderObj->orderBy('p.id', 'DESC')
+            //if the page query parameter does not exist it is always 0
             ->setFirstResult($page*5)
+            //the maximum number of product to be retrieved is 5
             ->setMaxResults( 5 );
         $query =   $queryBuilderObj->getQuery();
 

@@ -22,18 +22,19 @@ class ProductController extends AbstractController
     {
 
 
-
+        //get the request params
         $category = $request->query->get("category");
         $priceLessThan =  $request->query->get('priceLessThan');
         $page =  $request->query->get('page');
         if(!$page)
             $page = 0;
 
+        //get list of products
         $products =  $productRepository->findBySomeField(
             ['category' => $category , "priceLessThan" => $priceLessThan , "page" => $page]);
 
 
-
+        //return the json response with data formatted
         return $this->json(
             $outPutFormatter->format($products)
         );
