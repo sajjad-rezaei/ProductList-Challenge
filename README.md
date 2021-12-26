@@ -1,9 +1,9 @@
 ## The Product List Challenge
-***
+
 This is a product list challenge using symfony framework.
 
 ## Technologies:
-***
+
 -  Symfony 5.4.1
 -  MySQL 8
 -  PHP7.4
@@ -11,7 +11,7 @@ This is a product list challenge using symfony framework.
 -  Nginx
 -  Doctrine
 ## How to run:
-***
+
 - Make sure you have  internet connection to download dependencies.
 - Make sure you have docker and docker-compose up and running in your computer; if not take a look at below links:
     - docker desktop [installation](https://www.docker.com/get-started)
@@ -28,11 +28,11 @@ This is a product list challenge using symfony framework.
 Note: if there was an error, or it takes too long to install, please remove the `mysql` folder which is located in `docker` folder and run the installation again.
 
 ## How to run the tests:
-***
+
 When the application runs successfully you can run tests by running `docker-compose exec  php74-service php bin/phpunit` at the root of the project.
 
 ## How to use it:
-***
+
 
 Use  `http://localhost:8080/product/list` to see list of product.
 
@@ -45,7 +45,7 @@ You can also pass following query parameters:
 sample of query string mode: `http://localhost:8080/product/list?category=boots&priceLessThan=71000&page=1`
 
 ## How to add more product:
-***
+
 We can add more products in `install/products.json` file.
 
 Note: if you run project once and wants more products just remove the `mysql` folder which is located in `docker` folder and run the project again.
@@ -53,7 +53,7 @@ Note: if you run project once and wants more products just remove the `mysql` fo
 TODO: we can add  updater file later on to skip rerunning the application for adding new product.
 
 ## How it Works and Why:
-***
+
 
 This Application Use symfony/skeleton as PHP framework.
 I use Docker to automate the installation progress and make the development environment ready to go.
