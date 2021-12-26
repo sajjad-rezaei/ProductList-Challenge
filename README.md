@@ -19,7 +19,8 @@ This is a product list challenge using symfony framework.
     - docker-compose [installation](https://docs.docker.com/compose/install/)
 - Download the git repository
 - Open your terminal in project directory
-- Run `docker-compose up -d --build` command to run project in the background. 
+- Run `docker-compose up -d --build` command to run project in the background.
+    - Application will run on port `8080` , make sure the port is free or is not blocked.
 - Be patient it takes a minute to download the dependencies.
   - For monitoring the events run `docker-compose logs -f` at the root of the project, the installer will print `*************** Done ***************` when install completed.
   - For monitoring, you can also open `http://localhost:8080` it will show the message that installer is working you can keep refreshing the browser.
