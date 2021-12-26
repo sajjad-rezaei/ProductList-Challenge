@@ -43,7 +43,7 @@ You can also pass following query parameters:
 - priceLessThan: filter the output with category name (optional)
 - page: each page show 5 products. page starts from 0 (optional)
 
-sample of query string mode: `http://localhost:8080/product/list?category=boots&priceLessThan=71000&page=1`
+sample of query string mode: `http://localhost:8080/product/list?category=boots&priceLessThan=99000&page=0`
 
 ## How to add more product:
 
