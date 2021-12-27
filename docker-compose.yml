@@ -4,7 +4,7 @@ services:
 
     # nginx service
     nginx-service:
-        image: nginx:stable-alpine
+        image: nginx:1.21.4
         container_name: nginx-container
         ports:
             - "8080:80"
